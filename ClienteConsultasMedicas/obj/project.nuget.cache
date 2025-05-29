@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "6hLPtg4ozrg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stivm\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.11.0\\microsoft.identitymodel.abstractions.8.11.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.11.0\\microsoft.identitymodel.jsonwebtokens.8.11.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\microsoft.identitymodel.logging\\8.11.0\\microsoft.identitymodel.logging.8.11.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.11.0\\microsoft.identitymodel.tokens.8.11.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512",
+    "C:\\Users\\stivm\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.11.0\\system.identitymodel.tokens.jwt.8.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}
