@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.Windows;
 using ClienteConsultasMedicas.Services;
+using ClienteConsultasMedicas.Utils;
 
 namespace ClienteConsultasMedicas.Views
 {
@@ -25,12 +21,27 @@ namespace ClienteConsultasMedicas.Views
 
             if (!string.IsNullOrEmpty(token))
             {
-                MessageBox.Show("Login exitoso");
+                TokenHelper.SaveToken(token);
 
-                // Aquí puedes guardar el token y abrir la ventana principal según rol
-                // Ejemplo: abrir MainWindow
-                var main = new MainWindow();
-                main.Show();
+                string? rol = TokenHelper.GetRol();
+                MessageBox.Show($"Login exitoso. Rol: {rol}");
+
+                if (rol == "medico")
+                {
+                    var medicoWindow = new VentanaMedico();
+                    medicoWindow.Show();
+                }
+                else if (rol == "recepcionista")
+                {
+                    var recepcionistaWindow = new VentanaRecepcionista();
+                    recepcionistaWindow.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Rol no reconocido.");
+                    return;
+                }
+
                 this.Close();
             }
             else
@@ -38,7 +49,5 @@ namespace ClienteConsultasMedicas.Views
                 MessageBox.Show("Credenciales inválidas o error en la conexión.");
             }
         }
-
     }
 }
-

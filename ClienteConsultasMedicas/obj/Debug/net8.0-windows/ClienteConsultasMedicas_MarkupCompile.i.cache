@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\App.xaml
-21594365281
+9937783772
 
-8150140404
-207793538368
-MainWindow.xaml;Views\LoginWindow.xaml;
+211832351010
+3601403051514
+Views\ControlesMedico\CitasAsignadasControl.xaml;Views\ControlesMedico\HistorialClinicoControl.xaml;Views\ControlesMedico\RegistrarConsultaControl.xaml;Views\ControlesRecepcionista\RegistrarCitaControl.xaml;Views\ControlesRecepcionista\RegistrarPacienteControl.xaml;Views\ControlesRecepcionista\VerPacientesControl.xaml;Views\LoginWindow.xaml;Views\VentanaMedico.xaml;Views\VentanaRecepcionista.xaml;
 
 False
 

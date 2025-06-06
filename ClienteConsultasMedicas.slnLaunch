@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "Medical",
+    "Projects": [
+      {
+        "Path": "ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

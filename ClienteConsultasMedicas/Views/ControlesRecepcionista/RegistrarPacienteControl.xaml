@@ -1,0 +1,31 @@
+<UserControl x:Class="ClienteConsultasMedicas.Views.ControlesRecepcionista.RegistrarPacienteControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="800">
+    <Grid Background="White" Margin="20">
+        <StackPanel>
+            <TextBlock Text="Registro de Paciente" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Nombre completo:"/>
+                <TextBox x:Name="txtNombre" Height="30"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Email:"/>
+                <TextBox x:Name="txtEmail" Height="30"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Teléfono:"/>
+                <TextBox x:Name="txtTelefono" Height="30"/>
+            </StackPanel>
+
+            <Button Content="Registrar Paciente" Height="40" Width="180"
+                    Click="RegistrarPaciente_Click" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

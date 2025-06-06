@@ -1,0 +1,28 @@
+<UserControl x:Class="ClienteConsultasMedicas.Views.ControlesMedico.HistorialClinicoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="800">
+	<Grid Background="#FFF" Margin="20">
+		<StackPanel>
+			<TextBlock Text="Historial Clínico del Paciente" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+			<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+				<TextBlock Text="ID del Paciente:" VerticalAlignment="Center"/>
+				<TextBox x:Name="txtBuscarPacienteId" Width="200" Margin="10,0"/>
+				<Button Content="Buscar" Width="100" Click="BuscarHistorial_Click"/>
+			</StackPanel>
+
+			<DataGrid x:Name="dgHistorial" AutoGenerateColumns="False" Height="300">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Fecha" Binding="{Binding fecha}" Width="*"/>
+					<DataGridTextColumn Header="Síntomas" Binding="{Binding sintomas}" Width="*"/>
+					<DataGridTextColumn Header="Diagnóstico" Binding="{Binding diagnostico}" Width="*"/>
+					<DataGridTextColumn Header="Tratamiento" Binding="{Binding tratamiento}" Width="*"/>
+				</DataGrid.Columns>
+			</DataGrid>
+		</StackPanel>
+	</Grid>
+</UserControl>
