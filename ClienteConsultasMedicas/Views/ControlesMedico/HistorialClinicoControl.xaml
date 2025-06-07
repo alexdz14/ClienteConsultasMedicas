@@ -9,16 +9,20 @@
 		<StackPanel>
 			<TextBlock Text="Historial Clínico del Paciente" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
-			<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-				<TextBlock Text="ID del Paciente:" VerticalAlignment="Center"/>
-				<TextBox x:Name="txtBuscarPacienteId" Width="200" Margin="10,0"/>
-				<Button Content="Buscar" Width="100" Click="BuscarHistorial_Click"/>
-			</StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Selecciona Paciente:" VerticalAlignment="Center"/>
+                <ComboBox x:Name="cmbPacientes"
+              Width="250"
+              Margin="10,0"
+              DisplayMemberPath="nombre"
+              SelectedValuePath="id"/>
+                <Button Content="Buscar" Width="100" Click="BuscarHistorial_Click"/>
+            </StackPanel>
 
-			<DataGrid x:Name="dgHistorial" AutoGenerateColumns="False" Height="300">
+            <DataGrid x:Name="dgHistorial" AutoGenerateColumns="False" Height="300">
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Fecha" Binding="{Binding fecha}" Width="*"/>
-					<DataGridTextColumn Header="Síntomas" Binding="{Binding sintomas}" Width="*"/>
+                    <DataGridTextColumn Header="Fecha" Width="*" Binding="{Binding fechaHora, StringFormat='dd/MM/yyyy HH:mm'}"/>
+                    <DataGridTextColumn Header="Síntomas" Binding="{Binding sintomas}" Width="*"/>
 					<DataGridTextColumn Header="Diagnóstico" Binding="{Binding diagnostico}" Width="*"/>
 					<DataGridTextColumn Header="Tratamiento" Binding="{Binding tratamiento}" Width="*"/>
 				</DataGrid.Columns>

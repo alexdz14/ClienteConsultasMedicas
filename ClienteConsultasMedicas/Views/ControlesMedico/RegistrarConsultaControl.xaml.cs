@@ -10,24 +10,39 @@ namespace ClienteConsultasMedicas.Views.ControlesMedico
         public RegistrarConsultaControl()
         {
             InitializeComponent();
+            CargarPacientes();
+        }
+
+        private async void CargarPacientes()
+        {
+            var pacientes = await ApiService.ObtenerPacientesAsync();
+            cmbPacientes.ItemsSource = pacientes;
         }
 
         private async void GuardarConsulta_Click(object sender, RoutedEventArgs e)
         {
+            if (cmbPacientes.SelectedItem is not PacienteItem pacienteSeleccionado)
+            {
+                MessageBox.Show("Selecciona un paciente.");
+                return;
+            }
+
             var consulta = new Consulta
             {
-                pacienteId = txtPacienteId.Text,
+                pacienteId = pacienteSeleccionado.id,
                 sintomas = txtSintomas.Text,
                 diagnostico = txtDiagnostico.Text,
-                tratamiento = txtTratamiento.Text
+                tratamiento = txtTratamiento.Text,
+                FechaHora = DateTime.Now
             };
+
 
             bool ok = await ApiService.RegistrarConsultaAsync(consulta);
 
             if (ok)
             {
                 MessageBox.Show("Consulta registrada correctamente.");
-                txtPacienteId.Text = "";
+                cmbPacientes.SelectedIndex = -1;
                 txtSintomas.Text = "";
                 txtDiagnostico.Text = "";
                 txtTratamiento.Text = "";

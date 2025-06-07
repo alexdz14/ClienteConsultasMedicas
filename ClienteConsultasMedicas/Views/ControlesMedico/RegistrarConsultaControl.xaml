@@ -9,12 +9,15 @@
 		<StackPanel>
 			<TextBlock Text="Registrar Consulta Médica" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
-			<StackPanel Margin="0,0,0,10">
-				<TextBlock Text="ID del Paciente:"/>
-				<TextBox x:Name="txtPacienteId" Height="30"/>
-			</StackPanel>
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Selecciona un Paciente:"/>
+                <ComboBox x:Name="cmbPacientes"
+              Height="30"
+              DisplayMemberPath="nombre"
+              SelectedValuePath="id"/>
+            </StackPanel>
 
-			<StackPanel Margin="0,0,0,10">
+            <StackPanel Margin="0,0,0,10">
 				<TextBlock Text="Síntomas:"/>
 				<TextBox x:Name="txtSintomas" Height="30"/>
 			</StackPanel>

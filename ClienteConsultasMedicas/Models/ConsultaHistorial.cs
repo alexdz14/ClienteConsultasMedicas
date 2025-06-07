@@ -12,5 +12,7 @@ namespace ClienteConsultasMedicas.Models
         public string sintomas { get; set; } = "";
         public string diagnostico { get; set; } = "";
         public string tratamiento { get; set; } = "";
+        public DateTime fechaHora { get; set; }
+
     }
 }
