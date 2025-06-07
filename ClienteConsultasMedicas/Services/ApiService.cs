@@ -147,7 +147,12 @@ namespace ClienteConsultasMedicas.Services
 
         public static async Task<bool> RegistrarCitaAsync(CitaNueva cita)
         {
-            var json = JsonConvert.SerializeObject(cita);
+            var json = JsonConvert.SerializeObject(cita, new JsonSerializerSettings
+            {
+                DateFormatString = "yyyy-MM-ddTHH:mm:ss",
+                NullValueHandling = NullValueHandling.Ignore
+            });
+
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var request = new HttpRequestMessage(HttpMethod.Post, $"{baseUrl}/citas");
@@ -158,6 +163,29 @@ namespace ClienteConsultasMedicas.Services
 
             return response.IsSuccessStatusCode;
         }
+
+        public static async Task<List<CitaResumen>> ObtenerTodasCitasAsync()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/citas");
+            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+
+            var response = await client.SendAsync(request);
+            var json = await response.Content.ReadAsStringAsync();
+
+            return response.IsSuccessStatusCode
+                ? JsonConvert.DeserializeObject<List<CitaResumen>>(json) ?? new List<CitaResumen>()
+                : new List<CitaResumen>();
+        }
+
+        public static async Task<bool> CancelarCitaAsync(string id)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Delete, $"{baseUrl}/citas/{id}");
+            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+
+            var response = await client.SendAsync(request);
+            return response.IsSuccessStatusCode;
+        }
+
 
 
 

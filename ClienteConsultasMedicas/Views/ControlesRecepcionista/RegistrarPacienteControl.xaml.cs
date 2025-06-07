@@ -14,6 +14,20 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
 
         private async void RegistrarPaciente_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtTelefono.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
+
+            if (!EsEmailValido(txtEmail.Text))
+            {
+                MessageBox.Show("El email no tiene un formato válido.");
+                return;
+            }
+
             var paciente = new Paciente
             {
                 nombre = txtNombre.Text,
@@ -35,5 +49,19 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
                 MessageBox.Show("Error al registrar paciente.");
             }
         }
+
+        private bool EsEmailValido(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

@@ -29,6 +29,11 @@ namespace ClienteConsultasMedicas.Views
             contenido.Content = new ControlesRecepcionista.VerPacientesControl();
         }
 
+        private void BtnVerCitas_Click(object sender, RoutedEventArgs e)
+        {
+            contenido.Content = new ControlesRecepcionista.VerCitasControl();
+        }
+
         private void BtnCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
             new LoginWindow().Show();

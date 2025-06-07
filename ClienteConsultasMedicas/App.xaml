@@ -2,8 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ClienteConsultasMedicas"
+             xmlns:utils="clr-namespace:ClienteConsultasMedicas.Utils"
              StartupUri="Views/LoginWindow.xaml">
+
     <Application.Resources>
-         
+        <utils:EstadoToTextoConverter x:Key="EstadoToTextoConverter"/>
     </Application.Resources>
 </Application>

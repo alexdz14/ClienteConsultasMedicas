@@ -16,6 +16,8 @@
             <Button Content="Registrar paciente" Click="BtnPacientes_Click" Margin="10" Height="40"/>
             <Button Content="Registrar cita" Click="BtnCitas_Click" Margin="10" Height="40"/>
 			<Button Content="Ver pacientes" Click="BtnVerPacientes_Click" Margin="10" Height="40"/>
+			<Button Content="Ver citas" Click="BtnVerCitas_Click" Margin="10" Height="40"/>
+
 			<Button Content="Cerrar sesión" Click="BtnCerrarSesion_Click" Margin="10" Height="40"/>
         </StackPanel>
 

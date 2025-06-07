@@ -3,39 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="800">
+
     <Grid Background="White" Margin="20">
         <StackPanel>
             <TextBlock Text="Registro de Cita" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
             <StackPanel Margin="0,0,0,10">
                 <TextBlock Text="ID del Paciente:"/>
-                <TextBox x:Name="txtPacienteId" Height="30"/>
+                <TextBox x:Name="txtPacienteId" Height="30" Width="300"/>
             </StackPanel>
 
             <StackPanel Margin="0,0,0,10">
                 <TextBlock Text="ID del Médico:"/>
-                <TextBox x:Name="txtMedicoId" Height="30"/>
+                <TextBox x:Name="txtMedicoId" Height="30" Width="300"/>
             </StackPanel>
 
             <StackPanel Margin="0,0,0,10">
-                <TextBlock Text="Fecha (YYYY-MM-DD):"/>
-                <TextBox x:Name="txtFecha" Height="30"/>
+                <TextBlock Text="Fecha y hora:"/>
+                <xctk:DateTimePicker x:Name="dpFechaHora"
+                         Width="300"
+                         Height="30"
+                         Format="Custom"
+                         FormatString="dd/MM/yyyy HH:mm"
+                         Value="{x:Static sys:DateTime.Now}"/>
             </StackPanel>
 
-            <StackPanel Margin="0,0,0,10">
-                <TextBlock Text="Hora (HH:MM):"/>
-                <TextBox x:Name="txtHora" Height="30"/>
-            </StackPanel>
 
             <StackPanel Margin="0,0,0,10">
                 <TextBlock Text="Motivo:"/>
-                <TextBox x:Name="txtMotivo" Height="30"/>
+                <TextBox x:Name="txtMotivo" Height="30" Width="300"/>
             </StackPanel>
 
-            <Button Content="Registrar Cita" Height="40" Width="160"
-                    Click="RegistrarCita_Click" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+            <Button Content="Registrar Cita"
+                    Height="40" Width="160"
+                    Click="RegistrarCita_Click"
+                    HorizontalAlignment="Left" Margin="0,20,0,0"/>
         </StackPanel>
     </Grid>
 </UserControl>

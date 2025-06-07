@@ -10,8 +10,8 @@ namespace ClienteConsultasMedicas.Models
     {
         public string pacienteId { get; set; } = "";
         public string medicoId { get; set; } = "";
-        public string fecha { get; set; } = ""; // formato: "YYYY-MM-DD"
-        public string hora { get; set; } = "";  // formato: "HH:MM"
+        public DateTime fechaHora { get; set; }
         public string motivo { get; set; } = "";
     }
+
 }
