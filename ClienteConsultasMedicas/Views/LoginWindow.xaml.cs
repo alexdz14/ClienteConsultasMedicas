@@ -39,6 +39,13 @@ namespace ClienteConsultasMedicas.Views
             {
                 TokenHelper.SaveToken(token);
 
+                //Sincronización offline
+                bool conectado = await ApiService.HayConexionAsync();
+                if (conectado)
+                {
+                    await PacienteOfflineService.SincronizarPendientesAsync();
+                }
+
                 string? rol = TokenHelper.GetRol();
 
                 if (rol == "medico")
@@ -64,5 +71,6 @@ namespace ClienteConsultasMedicas.Views
                 MessageBox.Show("Credenciales inválidas o error en la conexión.");
             }
         }
+
     }
 }

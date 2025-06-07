@@ -81,5 +81,31 @@ namespace ClienteConsultasMedicas.Services
 
             return lista;
         }
+
+        public static async Task SincronizarPendientesAsync()
+        {
+            var pendientes = ObtenerPendientes();
+
+            foreach (var paciente in pendientes)
+            {
+                bool ok = await ApiService.RegistrarPacienteAsync(paciente);
+                if (ok)
+                {
+                    MarcarComoSincronizado(paciente.email);
+                }
+            }
+        }
+
+        private static void MarcarComoSincronizado(string email)
+        {
+            using var conexion = new SqliteConnection($"Data Source={dbPath}");
+            conexion.Open();
+
+            var comando = conexion.CreateCommand();
+            comando.CommandText = "UPDATE pacientes SET sincronizado = 1 WHERE email = $email";
+            comando.Parameters.AddWithValue("$email", email);
+            comando.ExecuteNonQuery();
+        }
+
     }
 }
