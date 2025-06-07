@@ -84,8 +84,8 @@ namespace ClienteConsultasMedicas.Views.ControlesAdministrador {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesadministrador/registra" +
-                    "rusuariocontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesadministrador/registrarusuarioc" +
+                    "ontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesAdministrador\RegistrarUsuarioControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

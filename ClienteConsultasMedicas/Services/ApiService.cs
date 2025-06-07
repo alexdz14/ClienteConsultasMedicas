@@ -249,6 +249,20 @@ namespace ClienteConsultasMedicas.Services
             }
         }
 
+        public static async Task<bool> HayConexionAsync()
+        {
+            try
+            {
+                var response = await client.GetAsync($"{baseUrl}/usuarios/ping");
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
         private class LoginResponse
         {
             public string token { get; set; } = string.Empty;

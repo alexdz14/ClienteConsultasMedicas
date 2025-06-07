@@ -12,8 +12,8 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\App.xaml
 131700962026
 
-291563025924
-365540244662
+301365709418
+369915935010
 Views\ControlesAdministrador\RegistrarUsuarioControl.xaml;Views\ControlesMedico\CitasAsignadasControl.xaml;Views\ControlesMedico\HistorialClinicoControl.xaml;Views\ControlesMedico\RegistrarConsultaControl.xaml;Views\ControlesRecepcionista\DashboardControl.xaml;Views\ControlesRecepcionista\RegistrarCitaControl.xaml;Views\ControlesRecepcionista\RegistrarPacienteControl.xaml;Views\ControlesRecepcionista\VerCitasControl.xaml;Views\ControlesRecepcionista\VerPacientesControl.xaml;Views\LoginWindow.xaml;Views\VentanaMedico.xaml;Views\VentanaRecepcionista.xaml;Views\VentanaRegistro.xaml;
 
 True

@@ -84,8 +84,8 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesrecepcionista/verpacie" +
-                    "ntescontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesrecepcionista/verpacientescontr" +
+                    "ol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesRecepcionista\VerPacientesControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

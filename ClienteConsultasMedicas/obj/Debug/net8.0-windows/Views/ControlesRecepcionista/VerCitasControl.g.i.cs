@@ -76,8 +76,8 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesrecepcionista/vercitas" +
-                    "control.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesrecepcionista/vercitascontrol.x" +
+                    "aml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesRecepcionista\VerCitasControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

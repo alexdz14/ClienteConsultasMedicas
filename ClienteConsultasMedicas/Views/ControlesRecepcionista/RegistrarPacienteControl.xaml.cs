@@ -35,20 +35,33 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
                 telefono = txtTelefono.Text
             };
 
-            bool ok = await ApiService.RegistrarPacienteAsync(paciente);
+            bool enLinea = await ApiService.HayConexionAsync();
 
-            if (ok)
+            if (enLinea)
             {
-                MessageBox.Show("Paciente registrado correctamente.");
-                txtNombre.Text = "";
-                txtEmail.Text = "";
-                txtTelefono.Text = "";
+                bool ok = await ApiService.RegistrarPacienteAsync(paciente);
+
+                if (ok)
+                {
+                    MessageBox.Show("Paciente registrado correctamente (en línea).");
+                }
+                else
+                {
+                    MessageBox.Show("Error al registrar paciente en línea.");
+                }
             }
             else
             {
-                MessageBox.Show("Error al registrar paciente.");
+                paciente.sincronizado = false;
+                PacienteOfflineService.GuardarPaciente(paciente);
+                MessageBox.Show("Paciente guardado localmente (sin conexión).");
             }
+
+            txtNombre.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
         }
+
 
         private bool EsEmailValido(string email)
         {

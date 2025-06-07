@@ -68,8 +68,8 @@ namespace ClienteConsultasMedicas.Views.ControlesMedico {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesmedico/citasasignadasc" +
-                    "ontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesmedico/citasasignadascontrol.xa" +
+                    "ml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesMedico\CitasAsignadasControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
