@@ -1,30 +1,59 @@
-<Window x:Class="ClienteConsultasMedicas.Views.VentanaRecepcionista"
+<Window x:Class="ClienteConsultasMedicas.Views.VentanaRecepcionista" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Módulo Recepcionista" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Panel lateral -->
-        <StackPanel Background="#FF2C3E50" Grid.Column="0">
-            <TextBlock Text="Recepcionista" FontSize="20" Foreground="White"
-                       HorizontalAlignment="Center" Margin="10"/>
-            <Button Content="Registrar paciente" Click="BtnPacientes_Click" Margin="10" Height="40"/>
-            <Button Content="Registrar cita" Click="BtnCitas_Click" Margin="10" Height="40"/>
-			<Button Content="Ver pacientes" Click="BtnVerPacientes_Click" Margin="10" Height="40"/>
-			<Button Content="Ver citas" Click="BtnVerCitas_Click" Margin="10" Height="40"/>
-            <Button Content="Resumen" 
+        <TextBlock x:Name="txtBannerOffline"
+                   Text="Estás trabajando en modo sin conexión"
+                   Background="#FFF4D3"
+                   Foreground="DarkRed"
+                   FontWeight="Bold"
+                   Padding="10"
+                   Visibility="Collapsed"
+                   HorizontalAlignment="Stretch"
+                   TextAlignment="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Background="#FF2C3E50" Grid.Column="0">
+                <TextBlock Text="Recepcionista" FontSize="20" Foreground="White"
+                           HorizontalAlignment="Center" Margin="10"/>
+                <Button x:Name="btnPacientes" Content="Registrar paciente" Click="BtnPacientes_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnCitas" Content="Registrar cita" Click="BtnCitas_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnVerPacientes" Content="Ver pacientes" Click="BtnVerPacientes_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnVerCitas" Content="Ver citas" Click="BtnVerCitas_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnDashboard" Content="Resumen" Height="40" Margin="5" Click="BtnDashboard_Click" Width="180"/>
+                <Button x:Name="btnSincronizar"
+        Content="Sincronizar ahora"
+        Click="BtnSincronizar_Click"
         Height="40"
-        Margin="5"
-        Click="BtnDashboard_Click" Width="180"/>
+        Margin="10,0"
+        Background="#3498db"
+        Foreground="White"
+        FontWeight="Bold"/>
+                <TextBlock x:Name="lblPendientes"
+           Text=""
+           Foreground="White"
+           FontStyle="Italic"
+           Margin="10,5,10,10"
+           Visibility="Collapsed"/>
 
-           <Button Content="Cerrar sesión" Click="BtnCerrarSesion_Click" Margin="10" Height="40"/>
-        </StackPanel>
+                <Button x:Name="btnCerrarSesion" Content="Cerrar sesión" Click="BtnCerrarSesion_Click" Margin="10" Height="40"/>
+            </StackPanel>
 
-        <ContentControl x:Name="contenido" Grid.Column="1" Margin="10"/>
+            <ContentControl x:Name="contenido" Grid.Column="1" Margin="10"/>
+        </Grid>
     </Grid>
 </Window>

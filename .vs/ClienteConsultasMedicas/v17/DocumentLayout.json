@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\services\\pacienteofflineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\services\\pacienteofflineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\views\\ventanarecepcionista.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\views\\ventanarecepcionista.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\views\\ventanarecepcionista.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\views\\ventanarecepcionista.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\views\\ventanamedico.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\views\\ventanamedico.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\views\\ventanamedico.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\views\\ventanamedico.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\utils\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\utils\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -20,14 +52,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\clienteconsultasmedicas.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\clienteconsultasmedicas.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|solutionrelative:clienteconsultasmedicas\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E82644F0-FFBC-4E90-A44D-FD08C54925D7}|ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj|c:\\users\\stivm\\source\\repos\\clienteconsultasmedicas\\clienteconsultasmedicas\\clienteconsultasmedicas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -49,11 +73,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PacienteOfflineService.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Services\\PacienteOfflineService.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Services\\PacienteOfflineService.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Services\\PacienteOfflineService.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Services\\PacienteOfflineService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAmwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:32:27.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VentanaMedico.xaml",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaMedico.xaml",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\VentanaMedico.xaml",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaMedico.xaml",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Views\\VentanaMedico.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-07T22:52:58.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VentanaMedico.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaMedico.xaml.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\VentanaMedico.xaml.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaMedico.xaml.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Views\\VentanaMedico.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T22:54:27.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VentanaRecepcionista.xaml",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-07T22:46:57.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "VentanaRecepcionista.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Views\\VentanaRecepcionista.xaml.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwEIAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T22:48:04.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\App.xaml",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\App.xaml",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\App.xaml",
+              "RelativeToolTip": "ClienteConsultasMedicas\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-07T22:09:18.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwC0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:43:01.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Services\\ApiService.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Services\\ApiService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:49:06.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\AssemblyInfo.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T22:09:10.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\stivm\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
@@ -66,56 +202,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\App.xaml",
-              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\App.xaml",
-              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\App.xaml",
-              "RelativeToolTip": "ClienteConsultasMedicas\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-07T22:09:18.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\AssemblyInfo.cs",
-              "RelativeToolTip": "ClienteConsultasMedicas\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "TokenHelper.cs",
+              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Utils\\TokenHelper.cs",
+              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Utils\\TokenHelper.cs",
+              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Utils\\TokenHelper.cs",
+              "RelativeToolTip": "ClienteConsultasMedicas\\Utils\\TokenHelper.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwA8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T22:09:10.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T22:44:52.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "ClienteConsultasMedicas",
               "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
               "RelativeDocumentMoniker": "ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
               "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
               "RelativeToolTip": "ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-29T05:41:54.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T05:41:54.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Services\\ApiService.cs",
-              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Services\\ApiService.cs",
-              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Services\\ApiService.cs",
-              "RelativeToolTip": "ClienteConsultasMedicas\\Services\\ApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:49:06.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "ClienteConsultasMedicas.csproj",
               "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
               "RelativeDocumentMoniker": "ClienteConsultasMedicas\\ClienteConsultasMedicas.csproj",
@@ -127,19 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "ClienteConsultasMedicas\\Views\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAowCoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:43:01.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "ClienteConsultasMedicas\\Views\\LoginWindow.xaml",
@@ -147,11 +245,12 @@
               "RelativeToolTip": "ClienteConsultasMedicas\\Views\\LoginWindow.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-29T04:42:29.049Z"
+              "WhenOpened": "2025-05-29T04:42:29.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ClienteConsultasMedicas\\MainWindow.xaml",
@@ -162,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\stivm\\source\\repos\\ClienteConsultasMedicas\\ClienteConsultasMedicas\\App.xaml.cs",
               "RelativeDocumentMoniker": "ClienteConsultasMedicas\\App.xaml.cs",
@@ -170,8 +269,7 @@
               "RelativeToolTip": "ClienteConsultasMedicas\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:34:57.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-29T04:34:57.851Z"
             }
           ]
         }

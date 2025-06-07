@@ -2,26 +2,42 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Módulo Médico" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <!-- Panel lateral -->
-            <ColumnDefinition Width="*"/>
-            <!-- Contenido -->
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Panel lateral -->
-        <StackPanel Background="#FF2C3E50" Grid.Column="0">
-            <TextBlock Text="Médico" FontSize="20" Foreground="White"
-                       HorizontalAlignment="Center" Margin="10"/>
-            <Button Content="Citas asignadas" Click="BtnCitas_Click" Margin="10" Height="40"/>
-            <Button Content="Registrar consulta" Click="BtnRegistrar_Click" Margin="10" Height="40"/>
-            <Button Content="Historial clínico" Click="BtnHistorial_Click" Margin="10" Height="40"/>
-            <Button Content="Cerrar sesión" Click="BtnCerrarSesion_Click" Margin="10" Height="40"/>
-        </StackPanel>
+        <TextBlock x:Name="txtBannerOffline"
+                   Text="Estás trabajando en modo sin conexión"
+                   Background="#FFF4D3"
+                   Foreground="DarkRed"
+                   FontWeight="Bold"
+                   Padding="10"
+                   Visibility="Collapsed"
+                   HorizontalAlignment="Stretch"
+                   TextAlignment="Center"/>
 
-        <!-- Contenedor dinámico -->
-        <ContentControl x:Name="contenido" Grid.Column="1" Margin="10"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Background="#FF2C3E50" Grid.Column="0">
+                <TextBlock Text="Médico" FontSize="20" Foreground="White"
+                           HorizontalAlignment="Center" Margin="10"/>
+                <Button x:Name="btnCitas" Content="Citas asignadas" Click="BtnCitas_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnRegistrar" Content="Registrar consulta" Click="BtnRegistrar_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnHistorial" Content="Historial clínico" Click="BtnHistorial_Click" Margin="10" Height="40"/>
+                <Button x:Name="btnCerrarSesion" Content="Cerrar sesión" Click="BtnCerrarSesion_Click" Margin="10" Height="40"/>
+
+            </StackPanel>
+
+            <ContentControl x:Name="contenido" Grid.Column="1" Margin="10"/>
+        </Grid>
     </Grid>
 </Window>

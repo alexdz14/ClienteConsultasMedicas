@@ -27,50 +27,68 @@ namespace ClienteConsultasMedicas.Views
             btnLogin.IsEnabled = camposLlenos;
         }
 
-
         private async void Login_Click(object sender, RoutedEventArgs e)
         {
             var usuario = txtUsuario.Text;
             var contrasena = txtContrasena.Password;
 
-            var token = await ApiService.LoginAsync(usuario, contrasena);
+            bool conectado = await ApiService.HayConexionAsync();
 
-            if (!string.IsNullOrEmpty(token))
+            if (conectado)
             {
-                TokenHelper.SaveToken(token);
+                var token = await ApiService.LoginAsync(usuario, contrasena);
 
-                //Sincronización offline
-                bool conectado = await ApiService.HayConexionAsync();
-                if (conectado)
+                if (!string.IsNullOrEmpty(token))
                 {
-                    await PacienteOfflineService.SincronizarPendientesAsync();
-                }
+                    TokenHelper.SaveToken(token);
 
-                string? rol = TokenHelper.GetRol();
+                    //Sincronización automática + mensaje
+                    int sincronizados = await PacienteOfflineService.SincronizarPendientesAsync(true);
+                    if (sincronizados > 0)
+                    {
+                        MessageBox.Show($"Se sincronizaron {sincronizados} pacientes correctamente.", "Sincronización automática");
+                    }
 
-                if (rol == "medico")
-                {
-                    var medicoWindow = new VentanaMedico();
-                    medicoWindow.Show();
-                }
-                else if (rol == "recepcionista")
-                {
-                    var recepcionistaWindow = new VentanaRecepcionista();
-                    recepcionistaWindow.Show();
+                    string? rol = TokenHelper.GetRol();
+                    AbrirVentanaPorRol(rol);
                 }
                 else
                 {
-                    MessageBox.Show("Rol no reconocido.");
-                    return;
+                    MessageBox.Show("Credenciales inválidas o error en la conexión.");
                 }
-
-                this.Close();
             }
             else
             {
-                MessageBox.Show("Credenciales inválidas o error en la conexión.");
+                // Modo sin conexión
+                if (TokenHelper.ExisteToken() && TokenHelper.GetRol() is string rolOffline)
+                {
+                    MessageBox.Show("Entrando en modo sin conexión con sesión previa.");
+                    AbrirVentanaPorRol(rolOffline);
+                }
+                else
+                {
+                    MessageBox.Show("No hay conexión ni sesión previa disponible.");
+                }
             }
         }
 
+        private void AbrirVentanaPorRol(string rol)
+        {
+            if (rol == "medico")
+            {
+                new VentanaMedico().Show();
+            }
+            else if (rol == "recepcionista")
+            {
+                new VentanaRecepcionista().Show();
+            }
+            else
+            {
+                MessageBox.Show("Rol no reconocido.");
+                return;
+            }
+
+            this.Close();
+        }
     }
 }

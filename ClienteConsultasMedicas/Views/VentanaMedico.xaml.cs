@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using ClienteConsultasMedicas.Services;
 using ClienteConsultasMedicas.Views.ControlesMedico;
 
 namespace ClienteConsultasMedicas.Views
@@ -9,6 +10,17 @@ namespace ClienteConsultasMedicas.Views
         {
             InitializeComponent();
         }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            bool conectado = await ApiService.HayConexionAsync();
+            txtBannerOffline.Visibility = conectado ? Visibility.Collapsed : Visibility.Visible;
+
+            btnCitas.IsEnabled = conectado;
+            btnRegistrar.IsEnabled = conectado;
+            btnHistorial.IsEnabled = conectado;
+        }
+
 
         private void BtnCitas_Click(object sender, RoutedEventArgs e)
         {

@@ -3,6 +3,7 @@ using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 
 namespace ClienteConsultasMedicas.Services
 {
@@ -17,6 +18,18 @@ namespace ClienteConsultasMedicas.Services
                 CrearBaseDeDatos();
             }
         }
+
+        public static int ContarPendientes()
+        {
+            using var conexion = new SqliteConnection($"Data Source={dbPath}");
+            conexion.Open();
+
+            using var cmd = conexion.CreateCommand();
+            cmd.CommandText = "SELECT COUNT(*) FROM pacientes WHERE sincronizado = 0";
+
+            return Convert.ToInt32(cmd.ExecuteScalar());
+        }
+
 
         private static void CrearBaseDeDatos()
         {
@@ -82,9 +95,10 @@ namespace ClienteConsultasMedicas.Services
             return lista;
         }
 
-        public static async Task SincronizarPendientesAsync()
+        public static async Task<int> SincronizarPendientesAsync(bool mostrarMensaje = false)
         {
             var pendientes = ObtenerPendientes();
+            int sincronizados = 0;
 
             foreach (var paciente in pendientes)
             {
@@ -92,8 +106,16 @@ namespace ClienteConsultasMedicas.Services
                 if (ok)
                 {
                     MarcarComoSincronizado(paciente.email);
+                    sincronizados++;
                 }
             }
+
+            if (mostrarMensaje && sincronizados > 0)
+            {
+                MessageBox.Show($"Se sincronizaron {sincronizados} pacientes.", "Sincronización");
+            }
+
+            return sincronizados;
         }
 
         private static void MarcarComoSincronizado(string email)
