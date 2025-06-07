@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using ClienteConsultasMedicas.Models;
@@ -12,19 +11,28 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
         public RegistrarCitaControl()
         {
             InitializeComponent();
+            Loaded += RegistrarCitaControl_Loaded;
+        }
+
+        private async void RegistrarCitaControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            var pacientes = await ApiService.ObtenerPacientesAsync();
+            var medicos = await ApiService.ObtenerMedicosAsync();
+
+            cmbPacientes.ItemsSource = pacientes;
+            cmbMedicos.ItemsSource = medicos;
         }
 
         private async void RegistrarCita_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPacienteId.Text) ||
-                string.IsNullOrWhiteSpace(txtMedicoId.Text) ||
+            if (cmbPacientes.SelectedValue == null ||
+                cmbMedicos.SelectedValue == null ||
                 string.IsNullOrWhiteSpace(txtMotivo.Text))
             {
                 MessageBox.Show("Todos los campos son obligatorios.");
                 return;
             }
 
-            // Validar que el usuario haya seleccionado una fecha
             if (dpFechaHora.Value == null)
             {
                 MessageBox.Show("Debes seleccionar una fecha y hora.");
@@ -39,13 +47,10 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
                 return;
             }
 
-            // 💬 DEBUG: Mostrar qué fecha se está enviando
-            MessageBox.Show("Fecha enviada: " + fechaHora.ToString("yyyy-MM-dd HH:mm:ss"));
-
             var cita = new CitaNueva
             {
-                pacienteId = txtPacienteId.Text,
-                medicoId = txtMedicoId.Text,
+                pacienteId = cmbPacientes.SelectedValue.ToString(),
+                medicoId = cmbMedicos.SelectedValue.ToString(),
                 motivo = txtMotivo.Text,
                 fechaHora = fechaHora
             };
@@ -55,8 +60,8 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
             if (ok)
             {
                 MessageBox.Show("Cita registrada exitosamente.");
-                txtPacienteId.Text = "";
-                txtMedicoId.Text = "";
+                cmbPacientes.SelectedIndex = -1;
+                cmbMedicos.SelectedIndex = -1;
                 txtMotivo.Text = "";
                 dpFechaHora.Value = DateTime.Now;
             }

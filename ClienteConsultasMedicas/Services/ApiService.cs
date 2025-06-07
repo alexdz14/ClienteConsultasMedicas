@@ -186,9 +186,31 @@ namespace ClienteConsultasMedicas.Services
             return response.IsSuccessStatusCode;
         }
 
+        public static async Task<List<PacienteItem>> ObtenerPacientesAsync()
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/pacientes");
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
 
+                var response = await client.SendAsync(request);
+                var json = await response.Content.ReadAsStringAsync();
 
+                return response.IsSuccessStatusCode
+                    ? JsonConvert.DeserializeObject<List<PacienteItem>>(json) ?? new List<PacienteItem>()
+                    : new List<PacienteItem>();
+            }
 
+        public static async Task<List<MedicoItem>> ObtenerMedicosAsync()
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/usuarios/medicos");
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+
+                var response = await client.SendAsync(request);
+                var json = await response.Content.ReadAsStringAsync();
+
+                return response.IsSuccessStatusCode
+                    ? JsonConvert.DeserializeObject<List<MedicoItem>>(json) ?? new List<MedicoItem>()
+                    : new List<MedicoItem>();
+            }
 
         private class LoginResponse
         {
