@@ -1,0 +1,11 @@
+<Window x:Class="ClienteConsultasMedicas.Views.VentanaRegistro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controles="clr-namespace:ClienteConsultasMedicas.Views.ControlesAdministrador"
+        Title="Registro de Usuario" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <controles:RegistrarUsuarioControl/>
+    </Grid>
+</Window>

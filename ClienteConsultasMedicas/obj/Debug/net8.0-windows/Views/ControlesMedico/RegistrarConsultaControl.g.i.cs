@@ -84,8 +84,8 @@ namespace ClienteConsultasMedicas.Views.ControlesMedico {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesmedico/registrarconsultacontrol" +
-                    ".xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesmedico/registrarconsul" +
+                    "tacontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesMedico\RegistrarConsultaControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

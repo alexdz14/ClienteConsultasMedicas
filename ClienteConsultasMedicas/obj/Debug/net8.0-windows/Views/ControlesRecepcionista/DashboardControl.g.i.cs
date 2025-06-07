@@ -84,8 +84,8 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesrecepcionista/dashboardcontrol." +
-                    "xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesrecepcionista/dashboar" +
+                    "dcontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesRecepcionista\DashboardControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

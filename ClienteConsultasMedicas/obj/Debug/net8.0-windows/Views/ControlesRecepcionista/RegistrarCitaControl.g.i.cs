@@ -101,8 +101,8 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;component/views/controlesrecepcionista/registrarcitacont" +
-                    "rol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteConsultasMedicas;V1.0.0.0;component/views/controlesrecepcionista/registra" +
+                    "rcitacontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ControlesRecepcionista\RegistrarCitaControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

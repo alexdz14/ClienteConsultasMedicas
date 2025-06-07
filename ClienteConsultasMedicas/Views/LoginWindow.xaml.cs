@@ -12,6 +12,22 @@ namespace ClienteConsultasMedicas.Views
             InitializeComponent();
         }
 
+        private void BtnRegistro_Click(object sender, RoutedEventArgs e)
+        {
+            var registro = new VentanaRegistro();
+            registro.ShowDialog();
+        }
+
+        private void CamposLogin_Cambiados(object sender, RoutedEventArgs e)
+        {
+            bool camposLlenos =
+                !string.IsNullOrWhiteSpace(txtUsuario.Text) &&
+                !string.IsNullOrWhiteSpace(txtContrasena.Password);
+
+            btnLogin.IsEnabled = camposLlenos;
+        }
+
+
         private async void Login_Click(object sender, RoutedEventArgs e)
         {
             var usuario = txtUsuario.Text;
@@ -24,7 +40,6 @@ namespace ClienteConsultasMedicas.Views
                 TokenHelper.SaveToken(token);
 
                 string? rol = TokenHelper.GetRol();
-                MessageBox.Show($"Login exitoso. Rol: {rol}");
 
                 if (rol == "medico")
                 {

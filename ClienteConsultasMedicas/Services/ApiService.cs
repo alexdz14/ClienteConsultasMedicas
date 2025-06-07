@@ -216,6 +216,39 @@ namespace ClienteConsultasMedicas.Services
                     : new List<MedicoItem>();
             }
 
+
+        //Funciones para registrar usuario y obtener lista de roles
+        public static async Task<bool> RegistrarUsuarioAsync(string nombre, string correo, string contrasena, string rol)
+        {
+            var usuario = new
+            {
+                nombre = nombre,
+                email = correo,
+                password = contrasena,
+                rol = rol
+            };
+
+            var json = JsonConvert.SerializeObject(usuario);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var request = new HttpRequestMessage(HttpMethod.Post, $"{baseUrl}/usuarios/registro");
+            request.Content = content;
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+
+            var response = await client.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                MessageBox.Show($"Error del servidor: {response.StatusCode}\n{error}", "Registro fallido", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+        }
+
         private class LoginResponse
         {
             public string token { get; set; } = string.Empty;
