@@ -23,6 +23,24 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
             dgCitas.ItemsSource = citas;
         }
 
+        private void txtBuscar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string texto = txtBuscar.Text.Trim().ToLower();
+
+            var citasFiltradas = citas.Where(c =>
+                c.paciente.ToLower().Contains(texto) ||
+                c.motivo.ToLower().Contains(texto) ||
+                c.estado.ToLower().Contains(texto)).ToList();
+
+            dgCitas.ItemsSource = citasFiltradas;
+        }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtBuscar.Text = "";
+            dgCitas.ItemsSource = citas;
+        }
+
         private void dgCitas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             citaSeleccionada = dgCitas.SelectedItem as CitaResumen;

@@ -5,21 +5,35 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="800">
-	<Grid Background="#FFF">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
 
-		<TextBlock Text="Citas Asignadas" FontSize="24" FontWeight="Bold" Margin="10"/>
+    <Grid Margin="20" Background="White">
+        <StackPanel>
+            <TextBlock Text="Citas Asignadas" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
 
-		<DataGrid x:Name="dgCitas" Grid.Row="1" AutoGenerateColumns="False" Margin="10" IsReadOnly="True">
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="Paciente" Binding="{Binding paciente}" Width="*"/>
-				<DataGridTextColumn Header="Fecha" Binding="{Binding fecha}" Width="*"/>
-				<DataGridTextColumn Header="Hora" Binding="{Binding hora}" Width="*"/>
-				<DataGridTextColumn Header="Motivo" Binding="{Binding motivo}" Width="2*"/>
-			</DataGrid.Columns>
-		</DataGrid>
-	</Grid>
+            <!-- Filtro de hoy -->
+            <CheckBox x:Name="chkHoy"
+                      Content="Mostrar solo citas de hoy"
+                      Margin="0,0,0,10"
+                      Checked="chkHoy_Checked"
+                      Unchecked="chkHoy_Unchecked"/>
+
+            <!-- Tabla -->
+            <DataGrid x:Name="dgCitas"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      Margin="0,10">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Paciente" Binding="{Binding paciente}" Width="*"/>
+                    <DataGridTextColumn Header="Fecha y Hora" Width="*">
+                        <DataGridTextColumn.Binding>
+                            <Binding Path="fechaHora" StringFormat="dd/MM/yyyy HH:mm"/>
+                        </DataGridTextColumn.Binding>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Motivo" Binding="{Binding motivo}" Width="2*"/>
+                    <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
 </UserControl>

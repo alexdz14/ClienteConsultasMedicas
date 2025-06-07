@@ -14,13 +14,36 @@ namespace ClienteConsultasMedicas.Views.ControlesMedico
             CargarCitas();
         }
 
+        private List<Cita> todasCitas = new();
+
         private async void CargarCitas()
         {
-            string? medicoId = TokenHelper.GetId(); // Necesitamos extraerlo del JWT
-            if (medicoId == null) return;
-
-            List<Cita> citas = await ApiService.GetCitasPorMedicoAsync(medicoId);
-            dgCitas.ItemsSource = citas;
+            todasCitas = await ApiService.ObtenerCitasDelMedicoAsync();
+            AplicarFiltro();
         }
+
+        private void chkHoy_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            AplicarFiltro();
+        }
+
+        private void chkHoy_Unchecked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            AplicarFiltro();
+        }
+
+        private void AplicarFiltro()
+        {
+            if (chkHoy.IsChecked == true)
+            {
+                dgCitas.ItemsSource = todasCitas
+                    .FindAll(c => c.fechaHora.Date == DateTime.Today && c.estado != "cancelada");
+            }
+            else
+            {
+                dgCitas.ItemsSource = todasCitas;
+            }
+        }
+
     }
 }

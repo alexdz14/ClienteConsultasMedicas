@@ -60,6 +60,7 @@ C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesMedico\CitasAsignadasControl.baml
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesMedico\HistorialClinicoControl.baml
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesMedico\RegistrarConsultaControl.baml
+C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\DashboardControl.baml
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\RegistrarCitaControl.baml
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\RegistrarPacienteControl.baml
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\VerCitasControl.baml
@@ -70,6 +71,7 @@ C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesMedico\CitasAsignadasControl.g.cs
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesMedico\HistorialClinicoControl.g.cs
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesMedico\RegistrarConsultaControl.g.cs
+C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\DashboardControl.g.cs
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\RegistrarCitaControl.g.cs
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\RegistrarPacienteControl.g.cs
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\Views\ControlesRecepcionista\VerCitasControl.g.cs

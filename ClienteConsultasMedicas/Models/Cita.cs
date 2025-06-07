@@ -9,9 +9,8 @@ namespace ClienteConsultasMedicas.Models
     public class Cita
     {
         public string paciente { get; set; } = "";
-        public string fecha { get; set; } = "";
-        public string hora { get; set; } = "";
+        public DateTime fechaHora { get; set; }
         public string motivo { get; set; } = "";
+        public string estado { get; set; } = "";
     }
 }
-

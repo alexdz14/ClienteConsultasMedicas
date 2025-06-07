@@ -6,16 +6,33 @@
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="800">
 
-	<Grid Margin="20" Background="White">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="*"/>
-			<RowDefinition Height="Auto"/>
-		</Grid.RowDefinitions>
+    <Grid Margin="20" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-		<TextBlock Text="Citas Registradas" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
+        <!-- Título -->
+        <TextBlock Text="Citas Registradas" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
 
-		<DataGrid x:Name="dgCitas"
+        <!-- Filtro de búsqueda -->
+        <StackPanel Orientation="Horizontal" Margin="0,50,0,10">
+            <TextBox x:Name="txtBuscar"
+                     Width="250"
+                     Height="30"
+                     Margin="0,0,10,0"
+                     VerticalContentAlignment="Center"
+                     TextChanged="txtBuscar_TextChanged"
+                     ToolTip="Buscar por paciente, motivo o estado..."/>
+
+            <Button Content="Limpiar"
+                    Height="30"
+                    Click="BtnLimpiar_Click"/>
+        </StackPanel>
+
+        <!-- Tabla de citas -->
+        <DataGrid x:Name="dgCitas"
                   Grid.Row="1"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
@@ -23,45 +40,40 @@
                   Margin="0,10"
                   SelectionChanged="dgCitas_SelectionChanged">
 
-			<!-- Estilo condicional: fondo rojo si está cancelada -->
-			<DataGrid.RowStyle>
-				<Style TargetType="DataGridRow">
-					<Style.Triggers>
-						<DataTrigger Binding="{Binding estado}" Value="cancelada">
-							<Setter Property="Background" Value="#FFFFD6D6"/>
-							<!-- Rojo claro -->
-							<Setter Property="Foreground" Value="Black"/>
-							<Setter Property="FontWeight" Value="Bold"/>
-						</DataTrigger>
-					</Style.Triggers>
-				</Style>
-			</DataGrid.RowStyle>
+            <!-- Estilo condicional: fondo rojo si está cancelada -->
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding estado}" Value="cancelada">
+                            <Setter Property="Background" Value="#FFFFD6D6"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
 
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="Paciente" Binding="{Binding paciente}" Width="*"/>
-				<DataGridTextColumn Header="Médico" Binding="{Binding medico}" Width="*"/>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Paciente" Binding="{Binding paciente}" Width="*"/>
+                <DataGridTextColumn Header="Médico" Binding="{Binding medico}" Width="*"/>
                 <DataGridTextColumn Header="Fecha y Hora" Width="*">
                     <DataGridTextColumn.Binding>
                         <Binding Path="fechaHora" StringFormat="dd/MM/yyyy HH:mm"/>
                     </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="Motivo" Binding="{Binding motivo}" Width="2*"/>
-				<DataGridTextColumn Header="Cancelada" Width="*">
-					<DataGridTextColumn.Binding>
-						<Binding Path="estado" Converter="{StaticResource EstadoToTextoConverter}" />
-					</DataGridTextColumn.Binding>
-				</DataGridTextColumn>
-			</DataGrid.Columns>
-		</DataGrid>
+                <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
+        <!-- Botón cancelar -->
         <Button x:Name="btnCancelar"
-        Content="Cancelar cita seleccionada"
-        Grid.Row="2"
-        Width="220"
-        Height="40"
-        Margin="0,20,0,0"
-        HorizontalAlignment="Left"
-        Click="BtnCancelar_Click"/>
-
+                Content="Cancelar cita seleccionada"
+                Grid.Row="2"
+                Width="220"
+                Height="40"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Left"
+                Click="BtnCancelar_Click"/>
     </Grid>
 </UserControl>

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+using ClienteConsultasMedicas.Views.ControlesRecepcionista;
+
 namespace ClienteConsultasMedicas.Views
 {
     public partial class VentanaRecepcionista : Window
@@ -27,6 +29,11 @@ namespace ClienteConsultasMedicas.Views
         private void BtnVerPacientes_Click(object sender, RoutedEventArgs e)
         {
             contenido.Content = new ControlesRecepcionista.VerPacientesControl();
+        }
+
+        private void BtnDashboard_Click(object sender, RoutedEventArgs e)
+        {
+            contenido.Content = new DashboardControl();
         }
 
         private void BtnVerCitas_Click(object sender, RoutedEventArgs e)

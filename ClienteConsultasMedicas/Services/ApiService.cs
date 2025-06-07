@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using ClienteConsultasMedicas.Models;
@@ -50,21 +52,23 @@ namespace ClienteConsultasMedicas.Services
         }
 
 
-        public static async Task<List<Cita>> GetCitasPorMedicoAsync(string medicoId)
+        public static async Task<List<Cita>> ObtenerCitasDelMedicoAsync()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/citas/medico/{medicoId}");
-            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/citas/medico");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
 
             var response = await client.SendAsync(request);
 
-            if (response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
-                var json = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<List<Cita>>(json) ?? new List<Cita>();
+                return new List<Cita>();
             }
 
-            return new List<Cita>();
+            var json = await response.Content.ReadAsStringAsync();
+
+            return JsonConvert.DeserializeObject<List<Cita>>(json) ?? new List<Cita>();
         }
+
 
         public static async Task<bool> RegistrarConsultaAsync(Consulta consulta)
         {
