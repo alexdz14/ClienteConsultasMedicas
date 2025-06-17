@@ -16,7 +16,7 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
 
         private async void RegistrarCitaControl_Loaded(object sender, RoutedEventArgs e)
         {
-            var pacientes = await ApiService.ObtenerPacientesAsync();
+            var pacientes = await ApiService.ObtenerPacientesDesdeUsuariosAsync();
             var medicos = await ApiService.ObtenerMedicosAsync();
 
             cmbPacientes.ItemsSource = pacientes;

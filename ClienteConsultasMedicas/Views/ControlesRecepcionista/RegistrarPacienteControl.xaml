@@ -23,9 +23,14 @@
                 <TextBlock Text="Teléfono:"/>
                 <TextBox x:Name="txtTelefono" Height="30"/>
             </StackPanel>
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Contraseña para acceso del paciente:"/>
+                <PasswordBox x:Name="txtPassword" Height="30"/>
+            </StackPanel>
 
-            <Button Content="Registrar Paciente" Height="40" Width="180"
-                    Click="RegistrarPaciente_Click" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+            <Button Content="Registrar Paciente con Acceso" Height="40" Width="240"
+        Click="RegistrarPaciente_Click" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+
         </StackPanel>
     </Grid>
 </UserControl>

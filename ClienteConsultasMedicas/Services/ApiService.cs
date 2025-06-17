@@ -112,6 +112,28 @@ namespace ClienteConsultasMedicas.Services
             var response = await client.SendAsync(request);
             return response.IsSuccessStatusCode;
         }
+        public static async Task<bool> RegistrarUsuarioPacienteAsync(object usuario)
+        {
+            var json = System.Text.Json.JsonSerializer.Serialize(usuario);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync($"{baseUrl}/usuarios/registro-paciente", content);
+            return response.IsSuccessStatusCode;
+        }
+
+        public static async Task<List<UsuarioPaciente>> ObtenerPacientesDesdeUsuariosAsync()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/usuarios/por-rol?rol=paciente");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+
+            var response = await client.SendAsync(request);
+            var json = await response.Content.ReadAsStringAsync();
+
+            return response.IsSuccessStatusCode
+                ? JsonConvert.DeserializeObject<List<UsuarioPaciente>>(json) ?? new List<UsuarioPaciente>()
+                : new List<UsuarioPaciente>();
+        }
+
 
         public static async Task<List<Paciente>> ObtenerTodosPacientesAsync()
         {

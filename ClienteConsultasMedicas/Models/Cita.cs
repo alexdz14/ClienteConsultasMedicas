@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace ClienteConsultasMedicas.Models
 {
     public class Cita
-    {
+    {public string PacienteId { get; set; }
+
         public string paciente { get; set; } = "";
         public DateTime fechaHora { get; set; }
         public string motivo { get; set; } = "";

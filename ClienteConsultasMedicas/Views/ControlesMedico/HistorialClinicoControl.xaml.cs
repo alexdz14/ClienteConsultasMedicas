@@ -17,14 +17,14 @@ namespace ClienteConsultasMedicas.Views.ControlesMedico
 
         private async void CargarPacientes()
         {
-            var pacientes = await ApiService.ObtenerPacientesAsync();
+            var pacientes = await ApiService.ObtenerPacientesDesdeUsuariosAsync();
             cmbPacientes.ItemsSource = pacientes;
         }
 
 
         private async void BuscarHistorial_Click(object sender, RoutedEventArgs e)
         {
-            if (cmbPacientes.SelectedItem is not PacienteItem pacienteSeleccionado)
+            if (cmbPacientes.SelectedItem is not UsuarioPaciente pacienteSeleccionado)
             {
                 MessageBox.Show("Selecciona un paciente.");
                 return;

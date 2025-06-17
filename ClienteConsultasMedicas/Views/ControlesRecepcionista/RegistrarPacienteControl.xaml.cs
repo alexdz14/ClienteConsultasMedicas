@@ -16,7 +16,8 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtTelefono.Text))
+                string.IsNullOrWhiteSpace(txtTelefono.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Password))
             {
                 MessageBox.Show("Todos los campos son obligatorios.");
                 return;
@@ -28,40 +29,50 @@ namespace ClienteConsultasMedicas.Views.ControlesRecepcionista
                 return;
             }
 
-            var paciente = new Paciente
-            {
-                nombre = txtNombre.Text,
-                email = txtEmail.Text,
-                telefono = txtTelefono.Text
-            };
-
             bool enLinea = await ApiService.HayConexionAsync();
 
             if (enLinea)
             {
-                bool ok = await ApiService.RegistrarPacienteAsync(paciente);
+                var usuarioPaciente = new
+                {
+                    nombre = txtNombre.Text,
+                    correo = txtEmail.Text,
+                    contrasena = txtPassword.Password
+                };
+
+                bool ok = await ApiService.RegistrarUsuarioPacienteAsync(usuarioPaciente);
 
                 if (ok)
                 {
-                    MessageBox.Show("Paciente registrado correctamente (en línea).");
+                    var paciente = new Paciente
+                    {
+                        nombre = txtNombre.Text,
+                        email = txtEmail.Text,
+                        telefono = txtTelefono.Text
+                    };
+
+                    bool registrado = await ApiService.RegistrarPacienteAsync(paciente);
+
+                    if (registrado)
+                        MessageBox.Show("Paciente registrado correctamente con acceso y disponible para agendar citas.");
+                    else
+                        MessageBox.Show("El usuario fue creado, pero no se pudo registrar como paciente clínico.");
                 }
                 else
                 {
-                    MessageBox.Show("Error al registrar paciente en línea.");
+                    MessageBox.Show("Error al registrar paciente.");
                 }
             }
             else
             {
-                paciente.sincronizado = false;
-                PacienteOfflineService.GuardarPaciente(paciente);
-                MessageBox.Show("Paciente guardado localmente (sin conexión).");
+                MessageBox.Show("Este tipo de registro requiere conexión.");
             }
 
             txtNombre.Text = "";
             txtEmail.Text = "";
             txtTelefono.Text = "";
+            txtPassword.Password = "";
         }
-
 
         private bool EsEmailValido(string email)
         {
