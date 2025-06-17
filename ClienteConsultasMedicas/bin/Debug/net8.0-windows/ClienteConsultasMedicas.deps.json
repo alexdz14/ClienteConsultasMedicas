@@ -13,7 +13,8 @@
           "Microsoft.Data.Sqlite": "9.0.5",
           "Newtonsoft.Json": "13.0.3",
           "RestSharp": "112.1.0",
-          "System.IdentityModel.Tokens.Jwt": "8.11.0"
+          "System.IdentityModel.Tokens.Jwt": "8.11.0",
+          "iTextSharp": "5.5.13.4"
         },
         "runtime": {
           "ClienteConsultasMedicas.dll": {}
@@ -43,6 +44,14 @@
           "lib/net5.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.2.0",
             "fileVersion": "4.0.2.0"
+          }
+        }
+      },
+      "BouncyCastle.Cryptography/2.4.0": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.4.0.33771"
           }
         }
       },
@@ -116,6 +125,17 @@
           },
           "lib/net5.0/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
             "locale": "zh-Hans"
+          }
+        }
+      },
+      "iTextSharp/5.5.13.4": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0"
+        },
+        "runtime": {
+          "lib/net461/itextsharp.dll": {
+            "assemblyVersion": "5.5.13.4",
+            "fileVersion": "5.5.13.4"
           }
         }
       },
@@ -554,7 +574,8 @@
           "BCrypt.Net-Next": "4.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.5",
           "MongoDB.Driver": "2.21.0",
-          "Swashbuckle.AspNetCore": "6.6.2"
+          "Swashbuckle.AspNetCore": "6.6.2",
+          "iTextSharp": "5.5.13.4"
         },
         "runtime": {
           "MedicalAPI.dll": {
@@ -592,6 +613,13 @@
       "path": "bcrypt.net-next/4.0.2",
       "hashPath": "bcrypt.net-next.4.0.2.nupkg.sha512"
     },
+    "BouncyCastle.Cryptography/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SwXsAV3sMvAU/Nn31pbjhWurYSjJ+/giI/0n6tCrYoupEK34iIHCuk3STAd9fx8yudM85KkLSVdn951vTng/vQ==",
+      "path": "bouncycastle.cryptography/2.4.0",
+      "hashPath": "bouncycastle.cryptography.2.4.0.nupkg.sha512"
+    },
     "DnsClient/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -605,6 +633,13 @@
       "sha512": "sha512-x6fCMLeExVZjyPl6f9/NRITW4uzT3xBZA40CBWA9YlH4/w6rKzsIeTDwYvavdmJLrl43p0LIFSQChISCnTSR6Q==",
       "path": "extended.wpf.toolkit/4.7.25104.5739",
       "hashPath": "extended.wpf.toolkit.4.7.25104.5739.nupkg.sha512"
+    },
+    "iTextSharp/5.5.13.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/cvCNv8AJ+XuD99u4NfHSSxkBJKTdvP36wcfQF9V1Cjzi1ycyFSa4vJ64a3DhFVUTKVO60WF8OmAqngQDTHgYA==",
+      "path": "itextsharp/5.5.13.4",
+      "hashPath": "itextsharp.5.5.13.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.5": {
       "type": "package",

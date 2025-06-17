@@ -125,3 +125,5 @@ C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\ClienteConsultasMedicas.pdb
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\ClienteConsultasMedicas.genruntimeconfig.cache
 C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\obj\Debug\net8.0-windows\ref\ClienteConsultasMedicas.dll
+C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\stivm\source\repos\ClienteConsultasMedicas\ClienteConsultasMedicas\bin\Debug\net8.0-windows\itextsharp.dll

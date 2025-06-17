@@ -1,5 +1,6 @@
 ﻿using ClienteConsultasMedicas.Models;
 using ClienteConsultasMedicas.Services;
+using ClienteConsultasMedicas.Utils;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -46,6 +47,28 @@ namespace ClienteConsultasMedicas.Views.ControlesMedico
             dgHistorial.ItemsSource = historial;
         }
 
+        private void BtnExportarPDF_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgHistorial.Items.Count == 0)
+            {
+                MessageBox.Show("No hay datos para exportar.");
+                return;
+            }
 
+            var historial = dgHistorial.Items.OfType<ConsultaHistorial>().ToList();
+
+            string? nombrePaciente = (cmbPacientes.SelectedItem as PacienteItem)?.nombre ?? "Paciente";
+
+            bool exito = PDFHelper.ExportarHistorial(historial, nombrePaciente);
+
+            if (exito)
+            {
+                MessageBox.Show("PDF exportado correctamente en tu escritorio.");
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al generar el PDF.");
+            }
+        }
     }
 }
