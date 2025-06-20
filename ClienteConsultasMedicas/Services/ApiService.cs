@@ -193,15 +193,36 @@ namespace ClienteConsultasMedicas.Services
         public static async Task<List<CitaResumen>> ObtenerTodasCitasAsync()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, $"{baseUrl}/citas");
-            request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", TokenHelper.GetToken());
 
             var response = await client.SendAsync(request);
+            if (!response.IsSuccessStatusCode)
+                return new List<CitaResumen>();
+
             var json = await response.Content.ReadAsStringAsync();
 
-            return response.IsSuccessStatusCode
-                ? JsonConvert.DeserializeObject<List<CitaResumen>>(json) ?? new List<CitaResumen>()
-                : new List<CitaResumen>();
+            var datos = System.Text.Json.JsonSerializer.Deserialize<List<System.Text.Json.JsonElement>>(json);
+
+            var resultado = new List<CitaResumen>();
+
+            foreach (var d in datos)
+            {
+                resultado.Add(new CitaResumen
+                {
+                    id = d.GetProperty("id").GetString(),
+                    paciente = d.TryGetProperty("pacienteNombre", out var p) ? p.GetString() : "Paciente desconocido",
+                    motivo = d.TryGetProperty("motivo", out var m) ? m.GetString() : "",
+                    estado = d.TryGetProperty("estado", out var e) ? e.GetString() : "",
+                    medico = d.TryGetProperty("medicoNombre", out var med) ? med.GetString() : "Médico desconocido",
+                    fechaHora = d.TryGetProperty("fechaHora", out var f) && f.ValueKind == JsonValueKind.String
+                        ? DateTime.Parse(f.GetString())
+                        : DateTime.MinValue
+                });
+            }
+
+            return resultado;
         }
+
 
         public static async Task<bool> CancelarCitaAsync(string id)
         {
